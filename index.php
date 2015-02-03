@@ -21,8 +21,16 @@ include 'template/header.php';
 <div id="content">
 <?php
 if (isset ( $_GET ['pagina'] )) {
-	if ($_GET ['home']) {
+	if ($_GET ['pagina']== 'home') {
 		include 'template/home.php';
+	}
+	elseif ($_GET ['pagina']== 'drinks'){
+		include 'template/addDrinkTemplate.php';
+		
+	}
+	elseif ($_GET ['pagina']== 'reminder'){
+		include 'template/addReminder.php';
+		
 	}
 } else {
 	include 'template/home.php';
