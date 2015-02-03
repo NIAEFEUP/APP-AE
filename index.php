@@ -4,7 +4,9 @@
 <title>App Ae</title>
 <meta charset="UTF-8">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/header.js"></script>
 <link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/header.css" rel="stylesheet">
 
 </head>
 <body>
@@ -18,25 +20,23 @@ if (! isset ( $_COOKIE ['PHPSESSID'] )) {
 }
 include 'template/header.php';
 ?>
-<div id="content">
-<?php
+<div id="content"><?php
 if (isset ( $_GET ['pagina'] )) {
-	if ($_GET ['pagina']== 'home') {
+	if ($_GET ['pagina'] == 'home') {
 		include 'template/home.php';
-	}
-	elseif ($_GET ['pagina']== 'drinks'){
+	} elseif ($_GET ['pagina'] == 'drinks') {
 		include 'template/addDrinkTemplate.php';
-		
-	}
-	elseif ($_GET ['pagina']== 'reminder'){
+	} elseif ($_GET ['pagina'] == 'reminder') {
 		include 'template/addReminder.php';
-		
+	} elseif ($_GET ['pagina'] == 'contacts') {
+		include 'template/search_contacts.php';
+	} elseif ($_GET ['pagina'] == 'create_contact') {
+		include 'template/contacts.php';
 	}
 } else {
 	include 'template/home.php';
 }
-?>
-</div>
+?></div>
 <?php
 include 'template/footer.php';
 ?>

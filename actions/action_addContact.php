@@ -3,8 +3,8 @@ session_start ();
 //TODO falta por expressoes regulares nos inputs
 function addContact() {
 	if (! isset ( $_SESSION ['userId'] )) {
-		echo 'u sure did it ;), nice try';
-		return;
+		//echo 'u sure did it ;), nice try';
+		//return;
 	}
 	
 	if (! isset ( $_POST ['name'] )) {

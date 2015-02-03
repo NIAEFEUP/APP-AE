@@ -12,7 +12,7 @@ if (! isset ( $_POST ['name'] )) {
 if (! preg_match ( '/^[a-z0-9]{1,20}$/i', $_POST ['name'] )) {
 	echo 'name not valid';
 	return;
-
+}
 $name = $_POST ['name'];
 
 $db = new PDO ( 'sqlite:../AE.db' );
