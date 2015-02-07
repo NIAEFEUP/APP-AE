@@ -11,3 +11,6 @@
 	</div>
 	<button type="submit" class="btn btn-default">Login</button>
 </form>
+<form role="form" action="changepass.php" method="POST">
+	<button type="submit" class="btn btn-default">Change Password</button>
+</form>

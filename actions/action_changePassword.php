@@ -1,19 +1,22 @@
 <?php 
 
 	 $db = new PDO ( 'sqlite:../AE.db' );	
-	 $pass = $db->query("SELECT hash FROM password");
 
-	 if(password_verify($postData['password'], $pass))
+	 if($postData['password'] === $postData['password_confirmation'])
 	 {
 	 	$_SESSION['username'] = poweredByNI;
+	 	$hashPash = password_hash($postData['password'] , PASSWORD_DEFAULT);
+
+	 	$db->query("UPDATE password SET hash = ?",
+	 			array($postData['username']));
 	 	$_SESSION['success'] = array(
-	 			"You've been successfully logged in."
+	 			"You've successfully changed the password."
 	 	);
 	 	header("Location: /index.php/");
 	 	exit();
 	 } else {
 	 	$_SESSION['errors'] = array('Passwords do not match.');
-	 	header("Location: template/login.php/");
+	 	header("Location: template/changepass.php/");
 	 	exit();
 	 }
 	 

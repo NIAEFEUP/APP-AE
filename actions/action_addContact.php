@@ -14,7 +14,7 @@ function addContact() {
 	
 	if(! isset($_POST ['email']))
 		$email = 'no entry';
-	else if (! preg_match ( '/^[a-z0-9]{1,20}$/i', $_POST ['email'] ))
+	else if (!filter_var($_POST ['email'], FILTER_VALIDATE_EMAIL))
 	{
 		echo 'email not valid';
 		return;

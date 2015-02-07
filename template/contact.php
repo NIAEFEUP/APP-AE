@@ -21,11 +21,8 @@ $stmt->execute ( array (
 ) );
 $result = $stmt->fetchObject();
 ?>
-	<p><?php echo $result->Name;?></p>
-	<p><?php echo $result->Email;?></p>
-	<p><?php echo $result->Address;?></p>
-	<p><?php echo $result->Phone;?></p>
-	<p><?php echo $result->Details;?></p>
-
-
-
+<p>Nome:<?php echo $result->Name;?></p><br>
+<p>Email:<?php echo $result->Email;?></p><br>
+<p>Morada:<?php echo $result->Address;?></p><br>
+<p>Telemóvel:<?php echo $result->Phone;?></p><br>
+<p>Observações:<?php echo $result->Details;?></p>
