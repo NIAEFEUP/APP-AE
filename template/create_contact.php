@@ -17,22 +17,6 @@
 								<input id="phone" class="form-control" name="phone" placeholder="Telem�vel" type="tel" autofocus>
 							</div>
 							<div class="row col-md-10">
-								</br> <label>Tipo</label>
-								<div class="input-group input-group">
-									<input class="pull-left" type="radio">
-									Fornecedor
-									</input>
-								</div>
-								<div class="input-group input-group">
-									<input class="pull-left" type="radio">
-									Outro
-									</input>
-									</br>
-								</div>
-
-							</div>
-
-							<div class="row col-md-10">
 								</br> <label>Observa��es</label> </br>
 								<textarea class="col-md-10" name="details" id="message"></textarea>
 							</div>

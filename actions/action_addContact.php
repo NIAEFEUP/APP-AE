@@ -1,6 +1,6 @@
 <?php
 session_start ();
-//TODO falta por expressoes regulares nos inputs
+
 function addContact() {
 	if (! isset ( $_SESSION ['userId'] )) {
 		//echo 'u sure did it ;), nice try';
@@ -14,15 +14,36 @@ function addContact() {
 	
 	if(! isset($_POST ['email']))
 		$email = 'no entry';
+	else if (! preg_match ( '/^[a-z0-9]{1,20}$/i', $_POST ['email'] ))
+	{
+		echo 'email not valid';
+		return;
+	}
 	
 	if(! isset($_POST ['address']))
 		$address = 'no entry';
+	else if (! preg_match ( '/^[a-z0-9]{1,200}$/i', $_POST ['address'] ))
+	{
+		echo 'address not valid';
+		return;
+	}
 	
 	if(! isset($_POST ['phone']))
 		$phone = '0';
+	else if (! preg_match ( '/^[0-9]{9}$/i', $_POST ['phone'] ))
+	{
+		echo 'phone not valid';
+		return;
+	}
+	
 	
 	if(! isset($_POST ['details']))
 		$details = 'no entry';
+	else if (! preg_match ( '/^[a-z0-9]{1,500}$/i', $_POST ['details'] ))
+	{
+		echo 'detail not valid';
+		return;
+	}
 	
 	$db = new PDO ( 'sqlite:../AE.db' );
 	

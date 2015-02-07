@@ -1,5 +1,4 @@
-<form action="search_contacts.php" method="post">
-    <input type="search" id="search" name="search" placeholder="Procurar contactos..."/>
-    <input type="submit" />
-</form>
-<div id="output"></div>
+
+<script type="text/javascript" src="js/search_contacts.js"></script>
+<input type="search" id="search" name="contact" placeholder="Procurar contactos..." value="<?php echo $_GET['contact_search'] ?>" />
+<div id="result"></div>

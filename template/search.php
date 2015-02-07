@@ -1,5 +1,6 @@
 <?php
-  $db = new PDO ( 'sqlite:contacts.db' );
+//nao sei qem fez isto mas ta mal
+$db = new PDO ( 'sqlite:contacts.db' );
   $output ='';
   if(isset($_POST['searchVal'])){
     $searchq = $_POST['searchVal'];
