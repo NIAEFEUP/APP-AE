@@ -73,6 +73,10 @@ if (isset ( $_GET ['pagina'] )) {
 		include 'template/contact.php';
 	} elseif ($_GET ['pagina'] == 'login') {
 		include 'template/login.php';
+	}elseif ($_GET ['pagina'] == 'addSala') {
+		include 'template/addRoom.php';
+	}elseif ($_GET ['pagina'] == 'addItem') {
+		include 'template/addItem.php';
 	}
 	else {
 		include '404.html';

@@ -9,11 +9,11 @@
 							<input id="name" class="form-control" name="name" placeholder="Nome" type="text" autofocus>
 							</br> <label>Email</label> </br>
 							<input id="email" class="form-control" name="email" placeholder="Email" type="email" autofocus>
-							</br> <label>Telemóvel</label> </br>
-							<input id="phone" class="form-control" name="phone" placeholder="Telemóvel" type="tel" autofocus>
+							</br> <label>TelemÃ³vel</label> </br>
+							<input id="phone" class="form-control" name="phone" placeholder="Telemï¿½vel" type="tel" autofocus>
 						</div>
 						<div class="row col-md-10">
-							</br> <label>Observções</label> </br>
+							</br> <label>ObservÃ§Ãµes</label> </br>
 							<textarea class="col-md-10" name="details" id="message"></textarea>
 						</div>
 						</br>
